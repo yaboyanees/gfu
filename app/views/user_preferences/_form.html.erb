@@ -1,0 +1,165 @@
+
+  <%= form_for @user_preference do |f|%>
+      <ul id="mycarousel" class="jcarousel-skin-tango" >
+        <li>
+            <h2>My Natural Skin Undertone:</h2>
+              <table>
+                <tr>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('red').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="red" name="undertone" value="red" style="display:none;"/>
+                  </td>     
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('yellow').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="yellow" name="undertone" value="yellow" style="display:none;"/>
+                  </td> 
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('pink').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="pink" name="undertone" value="pink" style="display:none;"/>
+                  </td> 
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('orange').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="orange" name="undertone" value="orange" style="display:none;"/>
+                  </td> 
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('carbon').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="cool3" name="carbon" value="cool3" style="display:none;"/>
+                  </td> 
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('gold').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="gold" name="undertone" value="gold" style="display:none;"/>
+                  </td> 
+                </tr>
+              </table>
+        </li>
+      
+        <li>
+        	<h2>My Skin Color Best Resembles:</h2>
+              <table>
+                <tr>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('light').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="light" name="skin_tone" value="light" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('fair').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="fair" name="skin_tone" value="fair" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('tan').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="tan" name="skin_tone" value="tan" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('olive').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="olive" name="skin_tone" value="tan" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('brown').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="brown" name="skin_tone" value="brown" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('ebony').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="ebony" name="skin_tone" value="ebony" style="display:none;"/>
+                  </td>
+                </tr>
+              </table>
+        </li>
+      
+        <li>
+            <h2>My Hair Looks Like:</h2>
+              <table>
+                <tr>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('black').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="black" name="hair_color" value="black" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('light_brown').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="light_brown" name="hair_color" value="light_brown" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('blonde').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="blonde" name="hair_color" value="blonde" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('red').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="red" name="hair_color" value="red" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('curly').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="curly" name="hair_color" value="curly" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('short').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="short" name="hair_color" value="short" style="display:none;"/>
+                  </td>
+                </tr>
+              </table>
+        </li>       
+      
+      <li>
+            <h2>My Go to Look is:</h2>
+              <table>
+                <tr>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('natural').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="natural" name="look" value="natural" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('classy').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="classy" name="look" value="classy" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('glamorous').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="glamorous" name="look" value="glamorous" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('rando').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="rando" name="look" value="rando" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('lom').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="lom" name="look" value="lom" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img src="assets/Q2_1.jpg" onclick="document.getElementById('exotic').checked = true" class="jcarousel-next jcarousel-next-horizontal">
+                    <input type="radio" id="exotic" name="look" value="exotic" style="display:none;"/>
+                  </td>
+                </tr>
+              </table>
+        </li>  
+        
+        <li>
+            <h2>I'm Always Caught Wearing:</h2>
+              <table>
+                <tr>
+                  <td>
+                    <img id="accessory_1" src="assets/Q2_1.jpg" onclick="document.getElementById('purse').checked = true" class="last">
+                    <input type="radio" id="purse" name="accessory" value="purse" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img id="accessory_2" src="assets/Q2_1.jpg" onclick="document.getElementById('shades').checked = true" class="last">
+                    <input type="radio" id="shades" name="accessory" value="shades" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img id="accessory_3" src="assets/Q2_1.jpg" onclick="document.getElementById('watch').checked = true" class="last">
+                    <input type="radio" id="watch" name="accessory" value="watch" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img id="accessory_4" src="assets/Q2_1.jpg" onclick="document.getElementById('heels').checked = true" class="last">
+                    <input type="radio" id="heels" name="accessory" value="heels" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img id="accessory_5" src="assets/Q2_1.jpg" onclick="document.getElementById('satchel').checked = true" class="last">
+                    <input type="radio" id="satchel" name="accessory" value="satchel" style="display:none;"/>
+                  </td>
+                  <td>
+                    <img id="accessory_6" src="assets/Q2_1.jpg" onclick="document.getElementById('headband').checked = true" class="last">
+                    <input type="radio" id="headband" name="accessory" value="headband" style="display:none;"/>
+                  </td>
+                </tr>
+              </table>
+        </li> 
+        <% end %>
+      </ul>
+</div>

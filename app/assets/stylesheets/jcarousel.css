@@ -1,0 +1,94 @@
+/**
+ * This <div> element is wrapped by jCarousel around the list
+ * and has the classname "jcarousel-container".
+ */
+.jcarousel-container { position: relative; }
+.jcarousel-clip {
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    overflow:hidden;
+    position:relative;
+	}
+
+.jcarousel-list {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+	}
+
+.jcarousel-list > li,
+.jcarousel-item {
+    float: left;
+    list-style: none;
+	margin:0;
+	padding:0;
+    /* We set the width/height explicitly. No width/height causes infinite loops. */
+    width: 140px;
+    height: 90px;
+	}
+
+/* jcarousel css
+----------------------------------------------------------------------*/
+.jcarousel-skin-tango .jcarousel-container {
+	}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 100%;
+    padding:0;
+	}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:  100%;
+	}
+
+.jcarousel-skin-tango .jcarousel-item {
+	width:230px;
+	height:100%;
+	}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+    margin:0 30px 0 0 !important;	
+	}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    color: #000;
+	}
+
+/* Horizontal Buttons
+----------------------------------------------------------------------*/
+.jcarousel-skin-tango .jcarousel-next-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-horizontal {	
+	/*width:40px;*/
+	/*height:40px;*/
+	/*background:#d10b6d url(../images/ca-nav-left.png) no-repeat center center;*/
+	/*position:absolute;*/
+	/*top:0%;*/
+	/*margin-top:0;*/
+	/*left:10px;*/
+	/*text-indent:-9000px;*/
+	/*opacity:0.5;*/
+	/*cursor:pointer;*/
+	/*z-index:100;*/
+	}
+.jcarousel-skin-tango .jcarousel-next-horizontal {	
+
+	background:#d10b6d url(../images/ca-nav-right.png) no-repeat center center;
+	left:50px;
+
+	}
+.last{width:100%; cursor:pointer;}	
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {	
+	opacity:.9;
+	}
+.jcarousel-skin-tango .jcarousel-next-horizontal:active,
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {	
+	opacity:.9;
+	}
+
+.listcarousel h5 { font-weight:bold; }

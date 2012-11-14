@@ -1,0 +1,63 @@
+<div id="quizcontainer">
+
+<%= render 'form' %>
+
+       <div class="progress_bar" 
+       style="position:relative; 
+       left:91px;
+       top: -58px;
+       height:30px;
+       width:1054px;
+       background:black;">
+       <p id="progress_bar" 
+       style="height:30px;
+       width:211px;
+       background:#d1086d; 
+       color:#d1086d;"></p></div>
+       
+     <script type="text/javascript">
+         $(document).ready(function(){
+             $('[id^="accessory"]').live("click",function(e){
+                 var accessory=$("input[name='accessory']:checked").val();
+                 var look=$("input[name='look']:checked").val();
+                 var undertone=$("input[name='undertone']:checked").val();
+                 var hair_color=$("input[name='hair_color']:checked").val();
+                 var skin_tone= $("input[name='skin_tone']:checked").val()
+                 
+                 $.ajax({type: 'POST',
+                         url:'/user_preferences?look='+look+"&hair_color="+hair_color+"&undertone="+undertone+"&skin_tone="+skin_tone+"&accessory="+accessory,
+                         success: function(data) {
+                             window.location = (data['url']);
+                         }
+                        });
+             });
+             $(".jcarousel-next").live("click",function(e){
+
+                var counter= parseInt($("#progress_bar").text().split('/')[0])
+                 counter=counter+1;
+                 $("#progress_bar").text(counter+"/5")
+                 var margin_left= $("#progress_bar").css("margin-left").split("p")[0]
+                 margin_left=     parseInt(margin_left)+211
+
+
+                $("#progress_bar").attr("style","margin-left:"+margin_left+"px;background:#d1086d;height:30px;width:211px; color:#d1086d;")
+             })
+             $(".jcarousel-prev").live("click",function(e){
+                 if(!$(this).hasClass('jcarousel-prev-disabled') ){
+                     var counter= parseInt($("#progress_bar").text().split('/')[0])
+                     counter=counter-1;
+                     $("#progress_bar").text(counter+"/5")
+
+
+                    var margin_left= $("#progress_bar").css("margin-left").split("p")[0]
+
+                     margin_left=     parseInt(margin_left)-211
+                     $("#progress_bar").attr("style","margin-left:"+margin_left+"px;background:#d1086d;height:30px;width:211px; color:#d1086d;")
+
+                 }
+
+
+             })
+         })
+     </script>
+

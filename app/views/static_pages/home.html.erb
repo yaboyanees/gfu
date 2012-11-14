@@ -1,0 +1,255 @@
+<% if user_signed_in? %>
+<title>Welcome Back: <%= current_user.email %></title>
+<div class="header_teaser">
+  <div class="inner">
+    <h3>Your Looks This Month</br><span>Choose One For Free Every Month</span> 
+    </h3> 
+  </div>
+</div>
+<!-- /- .header_teaser -->
+
+<div id="featured_slider">
+  <%= javascript_include_tag "jquery.contentcarousel.js" %>
+  <script type="text/javascript">
+      jQuery(document).ready(function() {
+          jQuery('#ca-container').contentcarousel();
+      });
+  </script>
+  
+<script type="text/javascript">
+  $(function () {
+  $("img").click(function() {
+    $(this).css({'border':'solid 5px #d1086d'});  
+  });
+});
+</script>
+  
+  <div class="slider_wrapper">
+    <div id="ca-container" class="ca-container">    
+     <div class="ca-wrapper">
+     
+<!--@user.each do |user| 
+put @user=User.find_by current_user.look--!>  
+        <div class="ca-item ca-item1">
+          <div class="ca-item-main">
+            <span class="title">Classy</span>
+            <img src="images/assets/img1.jpg" />
+<!-- classy --!>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item2">
+          <div class="ca-item-main">
+            <span class="title">Glamorous</span>
+            <img src="images/assets/img2.png" />
+<!--glamorous --!>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item3">
+          <div class="ca-item-main">
+            <span class="title">Look of the Month</span>
+            <img src="images/assets/img3.png" />
+<!--LOM --!>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item4">
+          <div class="ca-item-main">
+            <span class="title">Natural</span>
+            <img src="images/assets/img4.png" />
+<!--Natural --!>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item5">
+          <div class="ca-item-main">
+            <span class="title">Rando</span>
+            <img src="images/assets/img3.png" />
+<!--Rando --!>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item6">
+          <div class="ca-item-main">
+            <span class="title">On The Go</span>
+            <a class="ca-more"><img src="images/assets/img1.jpg" /></a>
+            <a class="ca-close">x</a>
+<!--OTG --!>
+          </div>
+        </div> 
+        
+     </div>   
+      <!-- /.ca-wrapper-->
+    </div>
+    <!-- /#ca-container-->
+  </div>
+  <!-- /-.slider_wrapper -->
+</div>
+<!-- /-#featured_slider -->
+<div class="clear"></div>
+
+<% else %>
+
+<title>Glamfu: Be Glamorous, Be You</title>
+<div class="header_teaser">
+  <div class="inner">
+    <h3>Free Personalized Makeup Looks</br><span>Discover exciting new looks every month tailored to your desires</span> 
+    </h3> 
+  </div>
+</div>
+<!-- /- .header_teaser -->
+<div class="clear"></div><span class="join"><a><%=link_to_modal "JOIN GLAMFU", user_preferences_path, remote: :true %></a></span>
+
+<div id="featured_slider">
+  <%= javascript_include_tag "jquery.contentcarousel.js" %>
+  <script type="text/javascript">
+      jQuery(document).ready(function() {
+          jQuery('#ca-container').contentcarousel();
+      });
+  </script>
+
+  <div class="slider_wrapper">
+    <div id="ca-container" class="ca-container">
+      <div class="ca-wrapper">
+        
+        <div class="ca-item ca-item1">
+          <div class="ca-item-main">
+            <span class="title">Classy</span>
+            <a class="ca-more"><img src="images/assets/img1.jpg" /></a>
+          </div>
+          <div class="ca-content-wrapper">
+            <div class="ca-content1">
+            <img src="images/assets/img1.jpg" />
+            <img src="images/assets/img1.jpg" />
+            <img src="images/assets/img1.jpg" />
+            </div>
+            <a class="ca-close">x</a>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item2">
+          <div class="ca-item-main">
+            <span class="title">Glamorous</span>
+            <a class="ca-more"><img alt="" src="images/assets/img2.png" /></a>
+          </div>
+          <div class="ca-content-wrapper">
+            <div class="ca-content1">
+            <img alt="" src="images/assets/img2.png" />
+            <img alt="" src="images/assets/img2.png" />
+            <img alt="" src="images/assets/img2.png" />
+            </div>
+            <a class="ca-close">x</a>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item3">
+          <div class="ca-item-main">
+            <span class="title">Look of the Month</span>
+            <a class="ca-more"><img src="images/assets/img3.png" /></a>
+          </div>
+          <div class="ca-content-wrapper">
+            <div class="ca-content1">
+            <img src="images/assets/img3.png" />
+            <img src="images/assets/img3.png" />
+            <img src="images/assets/img3.png" />
+            </div>
+            <a class="ca-close">x</a>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item4">
+          <div class="ca-item-main">
+            <span class="title">Natural</span>
+            <a class="ca-more"><img src="images/assets/img4.png" /></a>
+          </div>
+          <div class="ca-content-wrapper">
+            <div class="ca-content1">
+            <img src="images/assets/img4.png" />
+            <img src="images/assets/img4.png" />
+            <img src="images/assets/img4.png" />
+            </div>
+            <a class="ca-close">x</a>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item5">
+          <div class="ca-item-main">
+            <span class="title">Rando</span>
+            <a class="ca-more"><img src="images/assets/img3.png" /></a>
+          </div>
+          <div class="ca-content-wrapper">
+            <div class="ca-content1">
+            <img src="images/assets/img3.png" />
+            <img src="images/assets/img3.png" />
+            <img src="images/assets/img3.png" />
+            </div>
+            <a href="#" class="ca-close">x</a>
+          </div>
+        </div>
+        
+        <div class="ca-item ca-item6">
+          <div class="ca-item-main">
+            <span class="title">On The Go</span>
+            <a class="ca-more"><img src="images/assets/img1.jpg" /></a>
+          </div>
+          <div class="ca-content-wrapper">
+            <div class="ca-content1">
+            <img src="images/assets/img1.jpg" />
+            <img src="images/assets/img1.jpg" />
+            <img src="images/assets/img1.jpg" />
+            </div>
+            <a class="ca-close">x</a>
+          </div>
+        </div>        
+      </div>
+      <!-- /.ca-wrapper-->
+    </div>
+    <!-- /#ca-container-->
+  </div>
+  <!-- /-.slider_wrapper -->
+</div>
+<!-- /-#featured_slider -->
+<div class="clear"></div>
+
+<div id="footersidebar">
+  <div class="inner">
+    <div class="one_fourth ">
+      <section>
+        <h2 class="largeheading"><span>Find Your Glamorous Look</span></h2>
+        <span class="quiz"><a><%=link_to_modal 'Take Our Quiz', user_preferences_path, remote: :true %></a></span>
+      </section>
+    </div>
+    <!-- /- .one_fourth -->
+
+    <div class="one_fourth ">
+      <div class="widget">
+        <h3 class="widget-title"><%= link_to_modal 'Discover You', user_preferences_path, remote: :true %></br>
+        <span class="steps">Start with our personality quiz</span></h3>
+      </div>
+    </div>
+    <!-- /- .one_fourth -->
+
+    <div class="one_fourth ">
+      <div class="widget">
+        <h3 class="widget-title"><a style= "cursor:default;">Choose Your Style</a></br>
+        <span class="steps">From 6 looks tailored to you</span></h3>
+        <p></p>
+      </div>
+    </div>
+    <!-- /- .one_fourth -->
+
+    <div class="one_fourth last">
+      <div class="widget contactinfo">
+        <h3 class="widget-title"><a style= "cursor:default;">Be Glamorous</a></br>
+        <span class="steps">Pick a look to try this month </span></h3>
+		<p></p>
+      </div>
+    </div>
+    <!-- /- .one_fourth last -->
+  </div>
+  <!-- /- .inner(footer) -->
+</div>
+<!-- /- #footersidebar -->
+
+<% end %>

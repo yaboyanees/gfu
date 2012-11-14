@@ -1,0 +1,56 @@
+/* Circular Content Carousel Style */
+.ca-container     { position:relative; margin:0px auto; width:1160px; height:400px; }
+.ca-wrapper       { width:100%; height:100%; position:relative; }
+.ca-item          { position:relative; float:left; width:290px; height:100%;  }
+.ca-close {
+	position:absolute; 
+	top:0px; 
+	right:0px; 
+	width:30px; 
+	height:30px; 
+	background:#d10b6d url('../images/close-on.png') center center no-repeat;  
+	text-indent:-9000px; 
+	outline:none; 
+	}
+.ca-item-main    {
+	position:absolute; 
+	top:0px; 
+	left:4px; 
+	right:4px; 
+	bottom:0px; 
+	overflow:hidden; 
+	}
+
+.ca-item span.title {
+	position:absolute; 
+	top:0%; 
+	margin:0 auto;
+	padding:10px 20px; 
+	font-weight:bold; 
+	font: normal 11px/1.6 Arial, Verdana, Sans-serif;
+	text-transform:uppercase;
+	background:url('../images/opacs/dark70.png'); 
+	color:#fff;
+	}
+/* width:0px; = expands to width of the wrapper minus 1 element */ 
+.ca-content-wrapper        { position:absolute; top:0px; right:15px; z-index:10000;	width:0px; overflow:hidden; text-align:left; }
+.ca-content{
+	width:850px;
+	height:360px;		
+	overflow:hidden;
+	padding:20px 30px;	
+	background:#000;	
+	}
+.ca-content1{
+	width:900px;
+	height:410px;		
+	overflow:hidden;
+	background:white;
+	}
+
+.ca-content-text           { font-size: 14px; font-style: italic; font-family: "Georgia","Times New Roman",serif; margin:10px 20px; padding:10px 20px; line-height:24px; }
+.ca-content-text p         { padding-bottom:5px; }
+
+.ca-nav span               { width:40px; height:40px; background:#d10b6d url(../images/ca-nav-left1.png) no-repeat center center; position:absolute; bottom:0%; margin-top:0; left:5px; text-indent:-9000px; opacity:0.5; cursor:pointer; z-index:100; }
+.ca-nav span.ca-nav-next   { background:#d10b6d url(../images/ca-nav-right1.png) no-repeat center center; left:auto; left:45px; }
+.ca-nav span:hover         { opacity:1.0; }

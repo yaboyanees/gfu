@@ -1,0 +1,90 @@
+body { color: #999; }
+input#user_password, input#user_email, input#user_password_confirmation{ background: white; width:230px; height:30px; font-size:20px; border: 1px solid grey; border-top: 2px solid grey; border-left: 2px solid grey; }
+textarea { background: white;}
+#lgfb{position:relative; top:-39px; left:88px;}
+#lgfb2{position:relative; top:-33px; left:113px;}
+#lgfb img{
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+#lgfb img:hover{opacity:.9;}
+#lgfb2 img:hover{opacity:.9;}
+.submit {	
+background-color:black;
+font-family:Helvetica;
+font-size: 15px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+border:1px solid white;
+display:inline-block;
+color:white;
+padding:6px 20px;
+text-decoration:none;
+cursor:pointer;}
+.submit:hover{opacity:.8;}
+
+mark { background-color:#fff305;}
+mark.info { background:#666; color:#fff;}
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+	Link Colors
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+mark.orange      { background-color: #ff5c00; } 
+mark.red           { background-color: #861D23; } 
+mark.yellow     { background-color: #ffb515; } 
+mark.green       { background-color: #91bd09; } 
+
+	a	{ color:#d10b6d; }	
+	.logo span,
+
+	a:hover { color:black; }
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ * Headings
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+h1, h2, h4, h5, h6	{ color:#ffffff; }
+	
+			.nav li a  { color:#ffffff;}
+			.nav li a:hover, .sf-menu li li:hover, .sf-menu li li.sfHover,
+				.sf-menu li li a:focus, .sf-menu li li a:hover, 
+				.sf-menu li li a:active {
+					color:#d10b6d;  }
+					
+			.logo a	{ color:#666666;}
+			
+				.sf-menu a,
+				.sf-menu li:hover, .sf-menu li.sfHover,
+				.sf-menu a:focus, .sf-menu a:hover, 
+				.sf-menu a:active   { 
+					color:#d10b6d; 
+					font-size: 18px;
+					}
+				.sf-menu li li:hover, .sf-menu li li.sfHover,
+				.sf-menu li li a:focus, .sf-menu li li a:hover, 
+				.sf-menu li li a:active {
+					}
+				.sf-menu li.current-cat a:visited, 
+				.sf-menu li.current_page_item a:visited { color:#d10b6d; }
+	
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    Frontpage Teaser
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+.header_teaser h3, 
+.subtitle  h2,
+.subdesc  h4{ 
+	color:black; 
+	}
+
+			
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ * Footer
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+	#footersidebar p { color:black; }
+	#footersidebar h3  { color:#999999; }
+
+
+.sysform input.txtfield, 
+.sysform textarea { 
+	border:1px solid #444444; 
+	}

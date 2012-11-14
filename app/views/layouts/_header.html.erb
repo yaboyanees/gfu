@@ -1,0 +1,62 @@
+<header id="header">
+  <div class="topbar clearfix">
+    <div class="inner">
+      <ul class="nav">
+      <% if user_signed_in? %>
+        <span class="navi">Welcome: <a><%= link_to '', profiles_path %><%= current_user.email %></a></span>
+        <span class="navi"><a><%= link_to 'SIGN OUT', destroy_user_session_path, :method => :delete %></a></span>
+      <% else %>
+ 		<span class="navi">WELCOME: <a><%= link_to_modal 'JOIN', user_preferences_path, remote: :true %></a></span>
+      </ul>
+      <% end %>
+      <!-- /- .nav -->
+      <ul class="atpsocials right">
+        <li><a class="facebook" href="https://www.facebook.com"><img src="images/sociables/facebook.png" /></a></li>
+        <li><a class="twitter" href="https://www.twitter.com"><img src="images/sociables/twitter.png" /></a></li>
+        <li><a class="pinterest" href="https://www.pinterest.com"><img src="images/sociables/pinterest.png" /></a></li>
+      </ul>
+      <!-- /- .atpsocials -->
+    </div>
+  </div>
+  <!-- /- .topbar -->
+    <!-- /- .logo -->
+  <div id="head">
+    <div class="logo">
+      <h1 id="site-title"><%= link_to 'Glamfu', root_path %></h1>
+      <h2 id="site-description">be glamorous, be you</h2>
+    </div>
+    <div class="topmenu">
+      <nav>
+        <ul class="sf-menu">
+<% if user_signed_in? %>
+          <li><%= link_to 'MY HOME', profiles_path %></li>
+          <li><%= link_to 'ABOUT US', remote: :true %></li>
+          <li><%= link_to 'SIGN OUT', destroy_user_session_path, :method => :delete %><li>
+          <% else %>
+          <li><%= link_to_modal 'JOIN', user_preferences_path, remote: :true %></li>
+          <li><%= link_to 'ABOUT US', remote: :true %></li>
+          <li><%= link_to 'LOGIN', profiles_path, :remote =>true %>
+          <ul>
+        <%= form_for("user", :url => user_session_path) do |f| %>
+ 		 <div><%= f.label :email %><br />
+ 		 <%= f.email_field :email%></div>
+
+  		<div><%= f.label :password %><br />
+  		<%= f.password_field :password%></div>
+
+  		 <%= f.submit "LOGIN", :class=>"submit" %>
+   		
+   		<div id="lgfb"><%= link_to image_tag("lgfb.png"), user_omniauth_authorize_path(:facebook) %></div>
+        <div id="join2"><a><%= link_to_modal 'JOIN GLAMFU TODAY', user_preferences_path %></a></div>
+          </ul>
+          </li>
+        <% end %>
+
+<% end %>          
+    	</ul>
+      </nav>
+    </div>
+    <!-- /- .menu -->
+  </div>
+  <!-- /- #head -->
+</header>

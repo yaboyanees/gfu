@@ -1,0 +1,19 @@
+<h2>Join</h2>
+
+Your quiz: <%= @quiz.to_s %>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "SIGN UP", :class=>"submit" %></div>
+<% end %>
+<div id="lgfb2"><%= link_to image_tag("lgfb2.png"), user_omniauth_authorize_path(:facebook) %></div>

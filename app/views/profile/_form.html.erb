@@ -1,0 +1,18 @@
+<table>
+  <tr><th>Image</th><th>Skin Tone</th><th>Undertone</th><th>Hair Color</th><th>Look</th><th>Accessory</th></tr>
+  <% profiles.each do |profile| %>
+
+  <tr>
+    <td><%= image profile.image_url.to_s %></td>
+    <td><%= profile.skin_tone %></td>
+    <td><%= profile.undertone %></td>
+    <td><%= profile.hair_color %></td>
+    <td><%= profile.look %></td>
+    <td><%= profile.accessory %></td>
+  </tr>
+
+  <% form_for @profile %>
+     <%=  %>
+  <% end %>
+
+</table>

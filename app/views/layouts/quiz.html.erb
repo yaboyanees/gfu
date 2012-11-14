@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" style="overflow: hidden;">
+<head>
+  <meta charset="UTF-8" />
+  <title>Glamfu: Be Glamorous, Be You | <%= yield(:title) %></title>
+  <%= csrf_meta_tags %>
+    <%= javascript_include_tag "jquery-1.7.2.min" %>
+	<%= javascript_include_tag "jquery.jcarousel.min"%>
+    <%= javascript_include_tag "superfish.js" %>
+    <%= javascript_include_tag "jquery.preloadify.min.js" %>
+	<%= stylesheet_link_tag "skin"%>
+	<%= stylesheet_link_tag "dark"%>
+	<%= stylesheet_link_tag "jcarousel"%>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function() {
+        jQuery('#mycarousel').jcarousel({visible:1,scroll:1});
+    });
+    </script>
+
+
+    <%= yield %>
+    
+<%= javascript_include_tag "sys_custom.js" %>
+</body>
+</html>
